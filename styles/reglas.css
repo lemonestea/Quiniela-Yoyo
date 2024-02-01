@@ -1,0 +1,70 @@
+body{
+    margin-bottom: 10ch;
+}
+
+h1{
+    text-align: center;
+}
+p{
+    margin:0;
+}
+.puntos-reglas, .fechas-reglas{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,30ch);
+    gap: 4ch;
+}
+
+.puntos-reglas .fase, .fechas-reglas div{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding:2ch;
+    -webkit-box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    transition: all .2s ease-in-out;
+}
+.fechas-reglas div{
+    text-align: center;
+}
+
+.fase:hover, .fechas-reglas div:hover{
+    background-color: rgba(146, 146, 146, 0.3);
+    transform: scale(1.1);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3ch 10ch;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.icon, .texto{
+    text-align: center;
+}
+
+.center{
+    width: 100%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.center p{
+    text-align: center;
+    width: 30ch;
+    background-color: rgba(0,0,0, 0.3);
+    border-radius: 10px;
+    padding: 1ch 2ch 1ch 2ch;
+    -webkit-box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    .puntos-reglas, .fechas-reglas{
+        display:grid;
+        justify-content: center;
+        grid-template-columns: 80%
+    }
+}

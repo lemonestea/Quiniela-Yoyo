@@ -1,0 +1,118 @@
+h1{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 20ch 3ch 3ch 20ch 5ch;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 3ch;
+}
+
+.grid h1{
+    display:flex;
+    grid-column-start: 1;
+    width: 100%;
+    height: 100%;
+    grid-column-end: 6;
+    background: linear-gradient(transparent, rgb(102, 0, 156));
+    justify-content: center;
+    align-items: center;
+}
+
+.grid div, .promedio div{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top:1ch;
+    padding-bottom: 1ch;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promedio div{
+    border-bottom: 2px solid white;
+}
+
+#puntos{
+    background-color: rgba(0, 255, 42, 0.628);
+}
+
+#penales{
+    margin-top: -1ch;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 3, 156));
+
+}
+
+#empty{
+    background-color: transparent;
+}
+
+.position, p, .links{
+    text-align: center;
+}
+
+.links a{
+    margin-right:5px;
+    margin-left: 5px;
+    background: linear-gradient(transparent,rgba(255, 0, 255, 0.5));
+    padding: 1ch;
+    color:white;
+    text-decoration: none;
+    border-radius: 10px;
+    
+}
+
+.links a:hover{
+    background: linear-gradient(transparent,rgba(255, 0, 255, 0.7));
+}
+
+p img{
+    position:absolute;
+    margin-left: 1ch;
+}
+
+#equipo-favorito{
+    text-align: center;
+}
+
+#ddlist{
+    background: linear-gradient(black,transparent);
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+option{
+    background: black;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+
+#equipo-favorito button{
+    padding: 1ch 2ch 1ch 2ch;
+    background-color: rgba(101, 0, 156, 0.7);
+    border-radius: 10px;
+    color:white;
+    font-size: 18px;
+    transition: all .2s ease-in-out;
+    border:none;
+    margin-left: 1ch;
+}
+
+#equipo-favorito button:hover{
+    background-color: rgba(143, 0, 220, 0.8);
+}
+
+@media screen and (max-width: 600px){
+    .links{
+        display:grid;
+    }
+    .grid{
+        grid-template-columns: 15ch 2ch 2ch 15ch 3ch;
+    }
+}

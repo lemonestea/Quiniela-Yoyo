@@ -1,0 +1,58 @@
+.summary{
+    margin: 3ch;
+    width: 70ch;
+    text-decoration: none;
+    background-color: rgba(0, 242, 255, 0.3);
+    border-radius: 2ch;
+    text-align: center;
+    padding: 2ch;
+    transition: all .2s ease-in-out;
+}
+.instrucciones{
+    display: grid;
+    justify-content: center;
+}
+.summary:hover{
+    background-color: rgba(0, 165, 173, 0.575);
+}
+
+.details ul{
+    display: grid;
+    justify-items: center;
+}
+.paso{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+.instrucciones p{
+    width: 50ch;
+    height: auto;
+    background-color: rgba(0,0,0,0.3);
+    text-align: left;
+    margin: 1ch;
+    border-radius: 2ch;
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2ch;
+}
+
+@media screen and (max-width: 600px) {
+    .summary{
+        width: 80%;
+    }
+
+    .instrucciones p{
+        width: 80%;
+    }
+
+    .details ul{
+        display:block;
+    }
+
+    img{
+        max-width: 350px;
+    }
+}

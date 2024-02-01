@@ -1,0 +1,390 @@
+@media screen and (max-width: 600px){
+  body{
+    padding-bottom: 5ch;
+  }
+      .main-grid{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        row-gap: 1ch;
+        height: auto;
+          
+      }
+      .title,.username,.manda-resultados,.rrss,.reglas,.leaderboard,.tabla,.tus-puntos,.copa-foto,.jugadores-count{
+        background: linear-gradient(transparent,black);
+        transition: all .2s ease-in-out;
+      }
+      .title, .username{
+        text-align: center;
+        overflow: hidden;
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        padding: 1ch;
+      }
+      
+      .manda-resultados{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+        padding: 1ch;
+        border-radius: 10px;
+      }
+      .manda-resultados:hover, .rrss:hover, .reglas:hover{
+        transform: scale(1.1);
+      }
+      .rrss{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+        padding: 1ch;
+        border-radius: 10px;
+      }
+
+    a{
+        color:white;
+        text-decoration: none;
+      }
+
+    .reglas{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: auto;
+      padding: 1ch;
+      border-radius: 10px;
+      padding: 1ch;
+    }
+
+    .leaderboard{
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: auto;
+      padding: 1ch;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1ch;
+    }
+    .tabla{
+      display: inline-grid;
+      width: 80%;
+      grid-template-columns: 4ch auto 5ch;
+      margin-top:1ch;
+      padding:0;
+      font-size: 18px;
+      font-weight: normal;
+      row-gap: 1ch;
+    }
+    .tabla div{
+      padding: 1ch;
+      margin: 0;
+      border-top: 2px white solid;
+      border-bottom: 2px white solid;
+    }
+    .leaderboard:hover{
+      transform: scale(1.05);
+    }
+
+    .position-number, .myposition-number{
+      border-bottom-left-radius: 30px;
+      border-top-left-radius: 30px;
+      border-left: 2px white solid;
+  }
+  
+    .position-puntos, .myposition-puntos{
+      border-bottom-right-radius: 30px;
+      border-top-right-radius: 30px;
+      border-right: 2px white solid;
+    }
+    .tus-puntos{
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: auto;
+      padding: 1ch;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .tus-puntos:hover{
+      transform:scale(1.05);
+    }
+    .copa-foto{
+      width: 80%;
+      height: auto;
+      border-radius: 15px;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      padding: 1ch;
+      position:relative;
+    }
+    .copa-foto .messi{
+      display: none;
+      position:absolute;
+      z-index: 99;
+    }
+
+    .jugadores-count{
+      width: 80%;
+      height: auto;
+      border-radius: 15px;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      padding: 1ch;
+      position:relative;
+    }
+
+}
+@media screen and (min-width: 600px) {
+
+    .main-grid{
+      display: inline-grid;
+      grid-template-columns: repeat(25,4ch);
+      grid-template-rows: repeat(12,4ch);
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      width: 70%;
+      margin-left: 10ch;
+      margin-right: 10ch;
+      padding: 1%;
+      column-gap: 1ch;
+      row-gap: 1ch;
+      height: auto; 
+    }
+
+    .main-grid > div, .main-grid > a{
+      -webkit-box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+      box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    }
+      
+    .title:hover, .username:hover, .jugadores-count:hover{
+      transform: scale(1.03);
+    }
+
+    .title{
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 14;
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out; 
+    }
+    .username{
+      grid-column-start: 15;
+      grid-column-end: 21;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out; 
+    }
+    .manda-resultados{
+      grid-row-start: 4;
+      grid-row-end: 6;
+      grid-column-start: 15;
+      grid-column-end: 21;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out; 
+    }
+    .manda-resultados:hover, .rrss:hover, .reglas:hover{
+      transform: scale(1.05);
+    }
+    .rrss{
+      grid-row-start: 11;
+      grid-row-end: 12;
+      grid-column-start: 8;
+      grid-column-end: 14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+    }
+
+    a{
+        color:white;
+        text-decoration: none;
+      }
+    a:hover{
+      color:rgb(106, 253, 255);
+      background-color:rgba(0, 121, 121, 0.5);
+    }
+
+    .reglas{
+      grid-row-start: 7;
+      grid-row-end: 9;
+      grid-column-start: 15;
+      grid-column-end: 21;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;  
+    }
+
+    .leaderboard{
+      grid-row-start: 5;
+      grid-row-end: 9;
+      grid-column-start: 1;
+      grid-column-end: 7;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out; 
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      overflow: hidden;
+    }
+    .tabla{
+      display: inline-grid;
+      width: 80%;
+      grid-template-columns: auto auto auto;
+      margin-top:2ch;
+      padding:0;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: normal;
+      row-gap: 9px;
+    }
+    .tabla div{
+      padding: 1ch;
+      margin: 0;
+      border-bottom: 2px white solid;
+      border-top: 2px white solid;
+
+    }
+
+    .position-number, .myposition-number{
+      border-bottom-left-radius: 30px;
+      border-top-left-radius: 30px;
+      border-left: 2px white solid;
+  }
+
+  .position-puntos, .myposition-puntos{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-right: 2px white solid;
+  }
+
+  .copa-foto{
+    width: 100%;
+    height: 100%;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    grid-column-start: 8;
+    grid-column-end: 14;
+    background:linear-gradient(transparent,black);
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 2ch;
+    position:relative;
+    transition: all .2s ease-in-out; 
+
+  }
+  .copa-foto .messi{
+    display: none;
+    position:absolute;
+    z-index: 99;
+  }
+  .copa-foto:hover .messi{
+    transform: scale(1.1);
+    display: inline;
+  }
+  .copa-foto:hover .copa{
+    display: none;
+    position:absolute;
+    z-index: 99;
+  }
+  .copa-foto:hover{
+    transform: scale(1.05); 
+  }
+  .tus-puntos{
+    width: 100%;
+    height: 100%;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background: linear-gradient(transparent,black);
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 2ch;
+    position:relative;
+    transition: all .2s ease-in-out; 
+  }
+  .tus-puntos:hover{
+    transform:scale(1.05);
+  }
+    .jugadores-count{
+      grid-column-start: 15;
+      grid-column-end: 21;
+      grid-row-start: 10;
+      grid-row-end: 12;
+      width: 100%;
+      height: 100%;
+      margin-left: 3ch;
+      margin-right: 3ch;
+      background: linear-gradient(transparent,black);
+      padding: 2ch;
+      border-radius: 10px;
+      transition: all .2s ease-in-out; 
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+}

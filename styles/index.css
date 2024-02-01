@@ -1,0 +1,124 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: Geneva, Verdana, sans-serif;
+  background-color: rgb(13, 0, 61);
+}
+
+  .logo{
+    margin-top: 20px;
+  }
+
+  .parent {
+    text-align: center;
+  }
+  .child {
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+
+
+  input[type=text], input[type=password]{
+    width: 80%;
+    background-color : transparent;
+    color : white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border-bottom-color:2px solid white;
+    text-align : center;
+    font-size: 22px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Press Start 2P', system-ui;
+    padding-bottom: 5px;
+    text-transform: lowercase;
+  }
+  input[type=text]:focus, input[type=password]:focus{
+    margin-bottom: 9px;
+    border-bottom: 3px solid;
+    
+
+  }
+
+
+  
+  .login-form{
+    text-align: center;
+    background-color : rgba(0,0,0,50%);
+    background-attachment: fixed;
+    height: auto;
+    width : 80%;
+    margin : 0 auto;
+    border-radius: 40px;
+    padding: 20px;
+    font-family: 'Press Start 2P', system-ui;
+  }
+
+  .login-form:hover{
+    background-color: rgba(0,0,0,30%);
+  }
+
+  .login-form button{
+    background-color : rgb(24, 22, 162);
+    color: white;
+    font-weight: bold;
+    font-family: 'Press Start 2P', system-ui;
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+
+  }
+
+  .login-form button:hover{
+    background-color : rgb(36, 33, 209);
+
+  }
+  
+  .signup-form{
+    text-align: center;
+    background-color : rgba(0,0,0,50%);
+    background-attachment: fixed;
+    height: auto;
+    width : 80%;
+    margin : 0 auto;
+    border-radius: 40px;
+    padding: 20px;
+    font-family: 'Press Start 2P', system-ui;
+
+  }
+
+  .signup-form:hover{
+    background-color: rgba(0,0,0,30%);
+  }
+
+  .signup-form button{
+    background-color : rgb(24, 22, 162);
+    color: white;
+    font-weight: bold;
+    font-family: 'Press Start 2P', system-ui;
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+
+  }
+
+  .signup-form button:hover{
+    background-color : rgb(36, 33, 209);
+
+  }

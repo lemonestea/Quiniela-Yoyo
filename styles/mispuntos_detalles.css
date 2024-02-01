@@ -1,0 +1,67 @@
+.tabla{
+    display: inline-grid;
+    grid-template-columns: 20ch 3ch 3ch 20ch;
+    justify-items: center;
+    margin: 2ch;
+    
+}
+
+.tabla2{
+    display: inline-grid;
+    grid-template-columns: 20ch 3ch 3ch 20ch 10ch;
+    justify-items: center;
+    margin: 2ch;
+    
+}
+
+.tabla h1{
+grid-column-end: 5;
+grid-column-start: 1;
+}
+
+.tabla2 h1{
+    grid-column-end: 5;
+    grid-column-start: 1;
+}
+
+.resultado1, .resultado2, .puntos{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px white solid;
+}
+.resultado1{
+    border-right: 1px white solid;
+}
+
+.resultado2{
+    border-left: 1px white solid;
+}
+.puntos{
+    border-bottom: 1px white solid;
+    background-color: rgba(0, 103, 10, 0.5);
+}
+.equipo1, .equipo2{
+    text-align: center;
+    border-bottom : 1px white solid;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.pen, .penales1, .penales2{
+    text-align: center;
+    
+    width: 100%;
+    background-color: rgb(0 168 175 / 43%);
+}
+
+@media screen and (max-width: 500px){
+    .tabla{
+        grid-template-columns: 15ch 2ch 2ch 15ch;
+    }
+    .tabla2{
+        grid-template-columns: 15ch 2ch 2ch 15ch 3ch;
+    }
+}

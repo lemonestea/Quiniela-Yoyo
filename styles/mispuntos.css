@@ -1,0 +1,62 @@
+h1{
+    text-align: center;
+    width: 100%;
+}
+
+.puntos{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 15ch 5ch;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    row-gap: 1ch;
+}
+
+.puntos div, .puntos a{
+    
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1ch;
+    border-bottom: 2px solid rgba(0, 193, 211, 0.5);
+    border-top: 2px solid rgba(0, 193, 211, 0.5);
+}
+
+.puntos .fase{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 2px solid rgba(0, 193, 211, 0.5);
+}
+.puntos a, .total{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 2px solid rgba(0, 193, 211, 0.5);
+}
+
+.puntos a{
+    color:rgb(0, 172, 195);
+    text-decoration: none;
+}
+
+.puntos a:hover{
+    color:rgb(132, 0, 255);
+}
+
+.boton_enviar{
+    display: grid;
+    justify-content: center;
+    margin-top: 3ch;
+}
+
+.boton_enviar button{
+    padding: 4px 8px 4px 8px;
+    color: white;
+    font-size: 24px;
+    background-color: rgb(49 49 49);
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.boton_enviar button:hover{
+    background-color: rgb(0, 164, 52);
+    transform: scale(1.1);
+}

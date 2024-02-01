@@ -1,0 +1,68 @@
+h1{
+    text-align: center;
+}
+.tabla *{
+    border-bottom: 3px solid rgba(0, 238, 255, 0.8);
+    border-top: 3px solid rgba(0, 238, 255, 0.8);
+}
+
+.position-number, .position-user, .position-puntos{
+    font-size: 28px;
+    background: linear-gradient(transparent,black);
+    padding: 1ch;
+}
+
+.myposition-number, .myposition-user, .myposition-puntos{
+    font-size: 28px;
+    background: linear-gradient(transparent,rgb(0, 157, 171));
+    padding: 1ch;
+
+}
+
+.head{
+    border: none;
+    font-size: 20px;
+}
+
+.position-number, .myposition-number{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-left: 3px solid rgba(0, 238, 255, 0.8);
+}
+
+.position-puntos, .myposition-puntos{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-right: 3px solid rgba(0, 238, 255, 0.8);
+}
+
+.tabla{
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 1ch;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3ch;
+}
+
+.center{
+    width: 100%;
+    text-align: center;
+}
+
+.center button{
+    padding: 1ch 2ch 1ch 2ch;
+    border-radius: 10px;
+    background-color: rgba(127, 0, 211, 0.4);
+    color: white;
+    font-size:18px;
+    border: none;
+    -webkit-box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    box-shadow: 0 0 10px rgba(0, 193, 211, 0.5);
+    margin-bottom: 3ch;
+}
+
+.center button:hover{
+    background-color: rgba(0, 193, 211, 0.5);
+}

@@ -1,0 +1,26 @@
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: rgb(13, 0, 61);
+        background-image: url();
+        margin-top: 20px;
+        color: white;
+        /*Hide scrollbar*/
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    body::-webkit-scrollbar{ /*Chrome, Safari and opera*/
+        display: none;
+    }
+*{
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+    h1{
+        font-size: 24px;
+    }
+    
+    p{
+        font-size: 18px;
+    }
