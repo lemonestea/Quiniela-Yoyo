@@ -1,8 +1,4 @@
 <?php
-// $host = 'sql211.infinityfree.com';
-// $dbname = 'if0_35739207_db_quiniela';
-// $dbusername='if0_35739207';
-// $dbpwd = 'XG2zHS0ywU';
 
 $host = 'localhost';
 $dbname = 'quiniela';
