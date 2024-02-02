@@ -1,4 +1,5 @@
 ----Copa America 2024 Betting Platform----
+
 Welcome to the Copa America 2024 Betting Platform, a meticulously crafted web application
 developed with a focus on user engagement and entertainment. This project originated from
 the desire to provide a recreational avenue for soccer enthusiasts to immerse themselves 
