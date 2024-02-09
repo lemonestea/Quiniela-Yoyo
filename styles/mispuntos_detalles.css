@@ -60,8 +60,16 @@ grid-column-start: 1;
 @media screen and (max-width: 500px){
     .tabla{
         grid-template-columns: 15ch 2ch 2ch 15ch;
+        margin:0;
     }
     .tabla2{
         grid-template-columns: 15ch 2ch 2ch 15ch 3ch;
+        margin:0;
+        margin-bottom: 4ch;
+    }
+
+    .puntos{
+        border-bottom: 1px white solid;
+        background-color: rgba(0, 103, 10, 0.5);
     }
 }

@@ -48,7 +48,9 @@ ul.topnav li.right {float: right;}
     overflow: hidden;
     background-color: rgb(49, 49, 49);
     position: relative;
+    transition: all .5s ease-in-out;
   }
+
   
   .mobile #myLinks {
     display: none;
@@ -73,6 +75,10 @@ ul.topnav li.right {float: right;}
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .mobile a.icon:hover {
+    background-color: rgb(49, 49, 49);
   }
   
   .active {

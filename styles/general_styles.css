@@ -1,9 +1,6 @@
     body{
-        background-size: cover;
-        background-repeat: no-repeat;
         background-attachment: fixed;
-        background-color: rgb(13, 0, 61);
-        background-image: url();
+        background-image: linear-gradient(rgb(0, 20, 32),rgb(36, 0, 166));
         margin-top: 20px;
         color: white;
         /*Hide scrollbar*/

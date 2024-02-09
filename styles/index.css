@@ -6,11 +6,11 @@ body {
   color: white;
   font-weight: bold;
   font-family: Geneva, Verdana, sans-serif;
-  background-color: rgb(13, 0, 61);
+  background: linear-gradient(rgb(37, 37, 37),rgb(0, 0, 183));
 }
 
   .logo{
-    margin-top: 20px;
+    margin-top: 5ch;
   }
 
   .parent {
@@ -26,7 +26,7 @@ body {
 
 
 
-  input[type=text], input[type=password]{
+  input[type=text], input[type=password], input[type=number]{
     width: 80%;
     background-color : transparent;
     color : white;
@@ -41,17 +41,27 @@ body {
     font-size: 22px;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Press Start 2P', system-ui;
     padding-bottom: 5px;
     text-transform: lowercase;
   }
-  input[type=text]:focus, input[type=password]:focus{
+  input[type=text]:focus, input[type=password]:focus, input[type=number]:focus{
     margin-bottom: 9px;
     border-bottom: 3px solid;
     
 
   }
 
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 
   
   .login-form{
@@ -80,7 +90,7 @@ body {
     padding: 20px;
     font-size: 22px;
     border: none;
-
+    margin-bottom: 2ch;
   }
 
   .login-form button:hover{
@@ -121,4 +131,25 @@ body {
   .signup-form button:hover{
     background-color : rgb(36, 33, 209);
 
+  }
+
+  footer{
+    background-color: rgb(31, 18, 18);
+    margin: 20ch 0 0 0;
+    padding:3ch;
+    font-weight: normal;
+  }
+  footer a{
+    color: white;
+    text-decoration: none;
+    background-color: rgb(31, 18, 18);
+  }
+
+  #forgot-password-link{
+    color: white;
+    text-decoration: none;
+  }
+
+  #forgot-password-link:hover{
+    color:rgb(0, 194, 220);
   }

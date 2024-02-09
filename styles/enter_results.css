@@ -1,30 +1,43 @@
 @media only screen and (max-width : 500px) {
     .tabla{
         display:grid;
-        grid-template-columns: 240px 50px 50px 240px;
+        grid-template-columns: 15ch 3ch 3ch 15ch;
         justify-content: center;
     }
     
-    .equipo1{
-        text-align: right;
-    }
-    
     input[type=number]{
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: rgba(199, 199, 199, 0.6);
+        color: white;
+        font-weight: bolder;
         text-align: center;
-        
-        width: 80%;
-        height: 80%;
-        
+        transition: all .5s ease-in-out; 
     }
-    
-    button.boton_enviar{
-            
-            margin: 0;
-            position: relative;
-            top: 50%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+
+    input[type=number]:focus{
+        outline: none;
+        background-color: rgba(234, 234, 234, 0.9);
     }
+
+    .boton_enviar button{
+        background-color: rgba(178, 0, 237, 0.705);
+        color:white;
+        width: 10ch;
+        padding: 1ch;
+        border-radius: 10px;
+        border: none;
+        transition: all .3s ease-in-out; 
+    }
+
+    .boton_enviar button:hover{
+        transform: scale(1.1);
+        background-color: rgb(0, 164, 52);
+    }
+
     div.boton_enviar{
         display: flex;
         text-align: center;
@@ -32,132 +45,190 @@
         grid-column-end: 4;
         align-items: center;
         justify-content: center;
-    
+
+    }
+    .empty{
+        min-height: 4ch;
     }
     .resultado1, .resultado2 {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid white;
         text-align: center;
         display: flex;
         align-items: center;
-        
-    }
-    .resultado1{
-        justify-content: right;
-    }
-    
-    .resultado2{
-        justify-content: left;
     }
 
+    .equipo1, .equipo2{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: rgba(235, 235, 235, 0.4);
+        height: 5ch;
+        width: 100%;
+        padding: 5px 0 5px;
+    }
     .equipo1{
-        text-align: center;
-        border-bottom: 1px white solid;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
     }
-    
     .equipo2{
-        
-        text-align: center;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
-    /* Take off the arrows from input[type=text]
-    /* Chrome, Safari, Edge, Opera */
-     input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    } 
-    
-    /* Firefox */
-    input[type=number] {
-      -moz-appearance: textfield;
-    } 
-    
-}
-.tabla{
-    display:grid;
-    grid-template-columns: 19ch 5ch 5ch 19ch;
-    justify-content: center;
-}
-
-input[type=number]{
-    text-align: center;
-    background-color: rgba(0,0,0,0.2);
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-bottom: 1px white solid;
-    color: white;
-}
-
-input[type=number]:focus{
-    outline: none;
+    .penales1, .penales2{
+        width: 100%;
+        height: 5ch;
+        background-color: rgba(0, 140, 200, 0.4);
+    }
+    .penales1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .penales2{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .bandera1, .bandera2{
+        width: 25px;
+        height:25px;
+    }
     
 }
+@media only screen and (min-width : 500px){
+    .tabla{
+        display:grid;
+        grid-template-columns: 20ch 5ch 5ch 20ch;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
 
-.boton_enviar button{
-        
-        position: relative;
-        width: 80%;
-        top: 50%;
-        transition: all .3s ease-in-out; 
-        background-color: rgb(49 49 49);
+    input[type=number]{
         height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: rgba(199, 199, 199, 0.6);
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        transition: all .5s ease-in-out; 
+    }
+
+    input[type=number]:focus{
+        outline: none;
+        background-color: rgba(234, 234, 234, 0.7);
+    }
+
+    .boton_enviar button{
+        background-color: rgba(178, 0, 237, 0.705);
         color:white;
-        font-size: 16px;
-        font-weight: bold;
+        width: 10ch;
+        padding: 1ch;
         border-radius: 10px;
-}
+        border: none;
+        transition: all .3s ease-in-out; 
+    }
 
-.boton_enviar button:hover{
-    transform: scale(1.1);
-    background-color: rgb(0, 164, 52);
-}
+    .boton_enviar button:hover{
+        transform: scale(1.1);
+        background-color: rgb(0, 164, 52);
+    }
 
-div.boton_enviar{
-    display: flex;
-    text-align: center;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    align-items: center;
-    justify-content: center;
+    div.boton_enviar{
+        display: flex;
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        align-items: center;
+        justify-content: center;
 
-}
-.resultado1, .resultado2 {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    
-}
-.resultado1{
-    justify-content: right;
-    border-right: 1px white solid;
-}
+    }
+    .empty{
+        min-height: 4ch;
+    }
+    .resultado1, .resultado2 {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
 
-.resultado2{
-    justify-content: left;
-    border-left: 1px white solid;
-}
+    .equipo1, .equipo2{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: rgba(235, 235, 235, 0.4);
+        height: 6ch;
+        width: 100%;
+        padding: 10px 0 5px;
+    }
+    .equipo1{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .equipo2{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .penales1, .penales2{
+        width: 100%;
+        height: 6ch;
+        background-color: rgba(0, 140, 200, 0.4);
+    }
+    .penales1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .penales2{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 
-.equipo1, .equipo2{
-    padding-top: 1ch;
-    padding-bottom: 1ch;
-    text-align: center;
-    border-bottom : 1px white solid;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
+    .bandera1, .bandera2{
+        width:40px;
+        height:40px;
+    }
 
-.penales{
-    height: 50px;
+
 }
 
 /* Take off the arrows from input[type=text]
 /* Chrome, Safari, Edge, Opera */
- input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+-webkit-appearance: none;
+margin: 0;
 } 
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+-moz-appearance: textfield;
 }  
+.resultado1{
+    border-right: 1px white solid;
+}
+
+.resultado2{
+    border-left: 1px white solid;
+}
+
+input[type=number]:disabled{
+    background-color: rgba(70, 70, 70, 0.6);
+}

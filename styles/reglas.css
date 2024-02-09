@@ -8,6 +8,9 @@ h1{
 p{
     margin:0;
 }
+.title{
+    text-align: center;
+}
 .puntos-reglas, .fechas-reglas{
     display:grid;
     justify-content: center;

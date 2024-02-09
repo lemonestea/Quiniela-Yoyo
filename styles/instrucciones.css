@@ -20,15 +20,11 @@
     display: grid;
     justify-items: center;
 }
-.paso{
-    text-align: center;
-    font-weight: bold;
-    font-size: 22px;
-}
-.instrucciones p{
+.instrucciones li{
+    background-color: rgba(0,0,0,0.3);
+    list-style-type: none;
     width: 50ch;
     height: auto;
-    background-color: rgba(0,0,0,0.3);
     text-align: left;
     margin: 1ch;
     border-radius: 2ch;
@@ -38,13 +34,18 @@
     justify-content: center;
     padding: 2ch;
 }
+.paso{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
 
 @media screen and (max-width: 600px) {
     .summary{
         width: 80%;
     }
 
-    .instrucciones p{
+    .instrucciones li{
         width: 80%;
     }
 
