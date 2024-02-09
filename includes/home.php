@@ -1,10 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang='es'>
 <head>
     <link rel="icon" type="image/png" href="/images/icon_soccerball.png">
     <link rel="stylesheet" href="/styles/general_styles.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link rel="stylesheet" href="/styles/home.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
 </head>
 <body>
@@ -26,24 +27,24 @@
         <p>
         <?php
       require_once('config_session_inside.inc.php');
+      require_once('redirect.php');
       if (isset($_SESSION['user_id'])){
-        echo 'Hola, '.$_SESSION['user_username'] . '. Bienvenido a la Quiniela de Yoyo';
+        echo 'Hola, '.$_SESSION['user_username'] . '. Bienvenid@ a la Quiniela de Yoyo';
     }
     ?>
         </p>
     </div>
     <a class = 'manda-resultados' href="jugar.php">
-        <img src="../images/casino_coin.png" style="margin-right:2ch;" widht=50 height=50>
-          Envía tus resultados     
+        <img alt = "Jugar" src="../images/casino_coin.png" style="margin-right:2ch;" width=50 height=50>
+        Juega ya!   
     </a>
+
     <a class = "rrss" target=”_blank” href="https://www.instagram.com/chamofutbolero/">
-        <img style = "margin-right:2ch;" src="../images/instagram_logo.png" width = 40 height = 40> 
+        <img alt = '@chamofutbolero' style = "margin-right:2ch;" src="../images/instagram_logo.png" width = 40 height = 40> 
         Sígueme en Instagram</a>
 
-    </a>
-
     <a class= "reglas" href="reglas.php">
-        Échale un ojo a las Reglas &#128214
+        Mira las Reglas &#128214;
     </a>
     <a class= "leaderboard" href="tabla.php">
         Tabla de Clasificación<br>
@@ -55,8 +56,8 @@
         </div>
     </a>
     <div class='copa-foto'>
-        <img class ='copa' src="../images/copa_america.png" width = "90" height = "180">
-        <img class="messi" src="../images/messi.png"widht="100" height="150">
+        <img alt = 'Copa' class ='copa' src="../images/copa_america.png" width = "90" height = "180">
+        <img alt = 'Messi' class="messi" src="../images/messi.png" width="100" height="150">
     </div>
     <a href="mispuntos.php" class = 'tus-puntos'>
         Has acumulado 
@@ -81,8 +82,4 @@
 </body>
 
 </html>
-<?php
 
-require_once('redirect.php')
-
-?> 

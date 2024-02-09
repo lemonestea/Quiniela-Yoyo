@@ -12,36 +12,47 @@ function display_table(array | null $result, string $fase){
             $bandera1 = assign_file_path($match['equipo1']);
             $bandera2 = assign_file_path($match['equipo2']);
             
-            echo"<div class = 'equipo1'>";
+            echo"<div class = 'equipo1'>\n";
             echo'<div><img class="bandera1" ';
             echo 'src = "'.$bandera1.'" ';  
-            echo 'width = "25" height = "25"></div>';
+            echo 'title = "'.$match['equipo1'].'" alt = "'.$match['equipo1'].'"></div>';
             echo $match["equipo1"];
             echo"</div>";
-            echo"<div class = 'resultado1'>";
-            echo"<input type='number' required='required' min = '0' max = '99' name = 'resultado".$i."'>";
+            echo"<div class = 'resultado1'>\n";
+            echo"<input type='number' id='resultado".$i."' 
+            oninput='habilitarPenales(\"resultado".$i."\", \"resultado". $i+1 ."\", \"penales". $l ."\", \"penales". $l + 1   ."\")'
+             required='required' min = '0' max = '99' name = 'resultado".$i."'
+             pattern='[0-9]*' inputmode='numeric' >";
             echo"</div>";
             $i = $i + 1;
             echo"<div class = 'resultado2'>";
-            echo"<input type='number' required='required' min = '0' max = '99' name = 'resultado".$i."'>";
+            echo"<input type='number' id='resultado".$i."'
+             oninput='habilitarPenales(\"resultado".$i."\", \"resultado". $i-1 ."\", \"penales". $l ."\", \"penales". $l + 1   ."\")'
+             required='required' min = '0' max = '99' name = 'resultado".$i."'
+             pattern='[0-9]*' inputmode='numeric' >\n";
             $i = $i + 1;
             echo"</div>";
             echo"<div class = 'equipo2'>";
             echo'<div><img class="bandera2" ';
             echo 'src="'.$bandera2.'" ';  
-            echo 'width="25" height="25"></div>';
-            echo $match["equipo2"]."</div>";
+            echo 'title = "'.$match['equipo2'].'" alt = "'.$match['equipo2'].'"></div>';
+            echo $match["equipo2"]."</div>\n";
             if($fase != "fasedegrupos"){
-                echo "<div class = 'penales'></div><div class = 'resultado1'>";
-                echo "<input type = 'number' min = '0' max = '50' name = 'penales".$l."'>";
+                echo "<div class = 'penales1'>Penales</div><div class = 'resultado1'>";
+                echo "<input disabled type = 'number' id='penales".$l."'
+                min = '0' max = '50' name = 'penales".$l."'
+                pattern='[0-9]*' inputmode='numeric' >";
                 echo "</div>";
                 $l += 1;
                 echo "<div class = 'resultado2'>";
-                echo "<input type = 'number' min = '0' max = '50' name = 'penales".$l."'>";
+                echo "<input disabled type = 'number' id='penales".$l."'
+                min = '0' max = '50' name = 'penales".$l."'
+                pattern='[0-9]*' inputmode='numeric'>";
                 echo "</div>";
                 $l += 1;
-                echo "<div class = 'penales'></div>";
+                echo "<div class = 'penales2'></div>";
             }
+            echo "<div class = 'empty'></div><div class = 'empty'></div><div class = 'empty'></div><div class = 'empty'></div>";
         }
             echo "<div class='boton_enviar'>";
             echo"<button>Enviar</button>";

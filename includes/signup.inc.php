@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    $username = $_POST['username'];
+    $username = strtolower($_POST['username']);
     $password = $_POST['pwd'];
     $email = $_POST['email'];
     $confirm = $_POST['pwd2'];

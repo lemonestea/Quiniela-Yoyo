@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         require_once('mispuntos_view.php');
         $points = total_points_from_username($pdo,$username);
         load_results($username,$points,$pdo);
-        header('Location: home.php');
+        header('Location: jugar.php');
     }
 
     catch(PDOException $e){

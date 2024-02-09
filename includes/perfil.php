@@ -1,16 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang='es'>
 <head>
     <link rel="icon" type="image/png" href="/images/icon_soccerball.png">
     <link rel="stylesheet" href="/styles/general_styles.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link rel="stylesheet" href="/styles/perfil.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
 </head>
 <body>
 
 <?php
 require_once('config_session_inside.inc.php');
+require_once('redirect.php');
 require_once("menu.php");
 require_once("dbh.inc.php");
 require_once("mispuntos_control.php");
@@ -59,7 +61,7 @@ user_table($pdo,$username);
 
 function display_links(){
     echo"<div class = 'links'>";
-    echo "<a href = 'perfil.php#Fase de Grupos'>Fase de Grupos</a>";
+    echo "<a href = 'perfil.php#Fase-de-Grupos'>Fase de Grupos</a>";
     echo "<a href = 'perfil.php#Cuartos'>Cuartos</a>";
     echo "<a href = 'perfil.php#Semis'>Semis</a>";
     echo "<a href = 'perfil.php#Final'>Final</a>";
@@ -84,7 +86,7 @@ function user_table(object $pdo, string $username){
         $i = 0;
         $l = 0;
         $fases = [];
-        $fases[0] = "Fase de Grupos";
+        $fases[0] = "Fase-de-Grupos";
         $fases[1] = "Cuartos";
         $fases[2] = "Semis";
         $fases[3] = "Final";
@@ -101,7 +103,7 @@ function user_table(object $pdo, string $username){
                         echo "<div>".$game['equipo2']."</div>";
                         if(isset($player_points[$l][$i]['puntos'])){
                             if($player_points[$l][$i]['puntos'] > 0){
-                                echo "<div id = 'puntos'>+".$player_points[$l][$i]['puntos']."</div>";
+                                echo "<div class = 'puntos'>+".$player_points[$l][$i]['puntos']."</div>";
                             }
                             else{
                                 echo "<div>+".$player_points[$l][$i]['puntos']."</div>";
@@ -111,10 +113,10 @@ function user_table(object $pdo, string $username){
                         else{
                             echo "<div>N/A</div>";
                         }
-                        if($fases[$l] != "Fase de Grupos"){
-                            echo "<div id='penales'>Penales.</div><div id='penales'>".$game['penales1']."</div>";
-                            echo "<div id='penales'>".$game['penales2']."</div><div id='penales'></div>";
-                            echo"<div id='penales'></div>";
+                        if($fases[$l] != "Fase-de-Grupos"){
+                            echo "<div class='penales'>Penales.</div><div class='penales'>".$game['penales1']."</div>";
+                            echo "<div class='penales'>".$game['penales2']."</div><div class='penales'></div>";
+                            echo"<div class='penales'></div>";
                         }
                         $i++;
                         
@@ -218,7 +220,7 @@ function get_favorite_team(string $username, object $pdo){
 }
 function show_flag(string $team){
     $path = "../images/paises/".str_replace(" ","_",strtolower($team)).".png";
-    return "<img src='".$path."' width='25' height = '25'/>";
+    return "<img alt = '".$team."' src='".$path."' width='25' height = '25' >";
 }
 
 function get_date_creation(string $username, object $pdo){
@@ -232,7 +234,6 @@ function get_date_creation(string $username, object $pdo){
     echo "<p>Se unió el " . $fecha . "</p>";
 }
 
-require_once("redirect.php");
 ?>
 
 

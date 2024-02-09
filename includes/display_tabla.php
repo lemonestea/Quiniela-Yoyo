@@ -24,21 +24,21 @@
                 }
                 if($i == 1)
                 {
-                    echo "<div style='color: gold;' class = '".$class."-number'>&#129351</div>";
+                    echo "<div style='color: gold;' class = '".$class."-number'>&#129351;</div>";
                     echo "<div style='color: gold;' class = '".$class."-user'>" . $row['username'] . "</div>";
                     echo "<div style='color: gold;' class = '".$class."-puntos'>" . $row["puntos"] . "</div>\n";
                     
                 }
                 elseif($i == 2)
                 {
-                    echo "<div style='color:silver;' class = '".$class."-number'>&#129352</div>";
+                    echo "<div style='color:silver;' class = '".$class."-number'>&#129352;</div>";
                     echo "<div style='color:silver;' class = '".$class."-user'>" . $row['username'] . "</div>";
                     echo "<div style='color:silver;' class = '".$class."-puntos'>" . $row["puntos"] . "</div>\n";
                     
                 }
                 elseif($i == 3)
                 {
-                    echo "<div style='color:rgb(142, 61, 0);' class = '".$class."-number'>&#129353</div>";
+                    echo "<div style='color:rgb(142, 61, 0);' class = '".$class."-number'>&#129353;</div>";
                     echo "<div style='color:rgb(142, 61, 0);' class = '".$class."-user'>" . $row['username'] . "</div>";
                     echo "<div style='color:rgb(142, 61, 0);' class = '".$class."-puntos'>" . $row["puntos"] . "</div>\n";
                     

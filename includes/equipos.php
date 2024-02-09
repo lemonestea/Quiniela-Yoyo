@@ -1,11 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang='es'>
 <head>
     <link rel="icon" type="image/png" href="/images/icon_soccerball.png">
     <link rel="stylesheet" href="/styles/general_styles.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link rel="stylesheet" href="/styles/equipos.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipos</title>
 </head>
     <body>
@@ -13,6 +13,8 @@
     require_once('menu.php');
     require_once('config_session_inside.inc.php');
     require_once("dbh.inc.php");
+    require_once('redirect.php');
+    require_once('jugar_view.inc.php');
 
     $teams = get_all_teams($pdo);
     display_teams($teams, $pdo);
@@ -27,9 +29,9 @@
 
     function display_teams(array $teams, object $pdo) {
         echo "<div class = 'teams'>";
-        echo "<div class='header start' id='linea'>Equipo</div>";
+        echo "<div class='header start linea'>Equipo</div>";
         
-        echo "<div class = 'end' id = 'linea'>% Fav</div>";
+        echo "<div class = 'end linea'>% Fav</div>";
         
         $i = 0;
         foreach($teams as $team){
@@ -41,19 +43,13 @@
         $teams = sort_teams($teams);
         
         foreach($teams as $team){
-            $path = get_file_path($team["equipo"]);
+            $path = assign_file_path($team["equipo"]);
             
             echo"<div class='start equipo'>".$team['equipo']."</div>";
-            echo "<div class = 'middle bandera'><img src='".$path."' width='40' height = '40' /></div>";
+            echo "<div class = 'middle bandera'><img alt = '".$team['equipo']."' src='".$path."' width='40' height = '40' ></div>";
             echo "<div class = 'end porcentaje'>".$team['percentage']."%</div>";
         }
         echo "</div>";
-    }
-
-    function get_file_path(string $team){
-        $path = "../images/paises/";
-        $path = $path . strtolower(str_replace(" ","_",$team)) . ".png";
-        return $path;
     }
 
     function get_percentage(string $team, object $pdo){

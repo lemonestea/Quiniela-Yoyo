@@ -1,7 +1,7 @@
 <?php require_once('config_session_inside.inc.php');?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <ul class='topnav'>
-  <li><img style="margin:5px;" id="logo" height="40" width="40" src="/images/icon_soccerball.png"></li>
+  <li><img alt = 'Quiniela Yoyo' style="margin:5px;" id="logo" height="40" width="40" src="/images/icon_soccerball.png"></li>
   <li><a  href="../index.php">Inicio</a></li>
   <li><a href="mispuntos.php">Mis Puntos</a></li>
   <li><a href="jugar.php">Jugar</a></li>
@@ -24,7 +24,7 @@
 <!-- Top Navigation Menu -->
 <div class="mobile">
   
-  <a href="../index.php" class="active"><img id="logo" height="25"
+  <a href="../index.php" class="active"><img alt = 'Quiniela Yoyo' id="logo-mobile" height="25"
   width="25" style="margin-right:1ch;" src="/images/icon_soccerball.png">Inicio</a>
   <div id="myLinks">
     <a href="mispuntos.php">Mis Puntos</a>

@@ -9,15 +9,15 @@ function signup_input(){
     && !isset($_SESSION["errors_signup"]["username_taken"])){
 
         echo ('<input type = "text" name = "username" value = "' . 
-        $_SESSION["signup_data"]["username"]. '" placeholder = "Usuario" >');
+        $_SESSION["signup_data"]["username"]. '" autocapitalize="none" placeholder = "Usuario" >');
     }
 
 
     else{
-        echo '<input type = "text" name = "username" placeholder = "Usuario">';
+        echo '<input type = "text" name = "username" autocapitalize="none" placeholder = "Usuario">';
     }
     echo '<br>';
-    echo '<input type = "password" minlength="6" required name = "pwd" placeholder = "Contraseña">';
+    echo '<input id = "pwd" type = "password" minlength="6" required name = "pwd" autocapitalize="none" placeholder = "Contraseña">';
     echo '<br>';
 
     if (isset($_SESSION["signup_data"]["email"]) 
@@ -25,15 +25,17 @@ function signup_input(){
     && !isset($_SESSION["errors_signup"]["invalid_email"])){
 
         echo ('<input type = "text" name = "email" value = "' . 
-        $_SESSION["signup_data"]["email"] . '" placeholder = "E-mail">');
+        $_SESSION["signup_data"]["email"] . '" autocapitalize="none" placeholder = "E-mail">');
     }
 
     
 
     else{
-        echo '<input type = "text" name = "email" placeholder = "E-mail">';
+        echo '<input type = "text" name = "email" autocapitalize="none" placeholder = "E-mail">';
     }
-    echo '<br>';
+    echo '<br><br>';
+    
+    //echo '<input type="checkbox" onclick="myFunction()">Ver Contraseña';
 }
 
 function check_signup_errors(){
@@ -51,6 +53,9 @@ function check_signup_errors(){
                 break;
             }
             if($error == 'Este usuario ya existe'){
+                break;
+            }
+            if($error == 'Usuario no valido'){
                 break;
             }
             

@@ -1,13 +1,9 @@
 <?php
-
 if (isset($_SESSION['user_id'])){
-    // There is a session
+//Hay una sesion
 }
-
-else{ //no session, redirect to login page (index.php)
+else{
     header('Location: ../index.php');
     die();
 }
-
-
 ?>

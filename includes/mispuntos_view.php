@@ -35,8 +35,7 @@ function total_points(object $pdo,string $username){
     echo"<div class = 'fase'>Total</div><div class='total'>".get_total_points($points)."</div>";
     echo "</div>";
     echo "<form class='boton_enviar' action = 'cargar.php' method = 'post'>\n";
-    echo "<input type='hidden' name = 'puntos_totales' value= '".get_total_points($points)."' />";
-    echo "<button>Cargar</button>\n";
+    echo "<input type='hidden' name = 'puntos_totales' value= '".get_total_points($points)."' >";
     echo "</form>";
 }
 
